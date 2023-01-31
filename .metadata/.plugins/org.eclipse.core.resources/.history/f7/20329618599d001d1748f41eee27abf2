@@ -1,0 +1,5 @@
+package com.newlecture.web.web.entity;
+
+public class Menu {
+
+}

@@ -1,0 +1,15 @@
+package testPrj;
+
+import com.newlecture.web.entity.Menu;
+
+public class program {
+
+	public static void main(String[] args) {
+		
+		Menu menu = new Menu(0, null, 0, null);
+		menu.setName("아메리카노");
+		System.out.println(menu);
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.nelecture.web.jdbc;
+
+public class JDBCProgram {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		DriverManager
+//		Connection
+//		Statement
+//		Resultset
+		
+	}
+
+}

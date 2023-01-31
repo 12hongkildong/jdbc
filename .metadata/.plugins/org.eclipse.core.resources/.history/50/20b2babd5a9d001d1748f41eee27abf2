@@ -1,0 +1,28 @@
+package com.newlecture.web.api.menu;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/admin/menus")
+public class ListServlet extends HttpServlet{
+	
+
+	// 메뉴 목록 줘
+	// 1번 메뉴 줘
+	// 나 3번 메뉴 지워줘
+	// 나 메뉴 하나 생성해줘
+	// 나 3번 메뉴 내용 수정해줘
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("서비스 콜");
+		super.doGet(req, resp);
+	}
+	
+}
