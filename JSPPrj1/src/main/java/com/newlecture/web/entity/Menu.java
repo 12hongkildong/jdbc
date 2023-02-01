@@ -11,12 +11,12 @@ public class Menu {
 		return id;
 	}
 	
-//	static {
-//		System.out.println("실행된당");	
-//		Menu menu = new Menu();
-//		menu.setName("아메리카노");
-//		System.out.println(menu);
-//	}
+	static {
+		System.out.println("실행된당");	
+		Menu menu = new Menu();
+		menu.setName("아메리카노");
+		System.out.println(menu);
+	}
 	
 	public Menu(){
 //		Menu menu = new Menu();

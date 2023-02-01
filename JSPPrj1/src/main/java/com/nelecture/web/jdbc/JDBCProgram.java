@@ -21,23 +21,23 @@ public class JDBCProgram {
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery("select * from member");
 		
-		{	
-			rs.next();
+		
+		// 필터링, 집계, 정렬
+		while(rs.next()){	
+			int id = rs.getInt("id");
+			String name = rs.getString("name");
+			
+			if(id<100)
+				continue;
+			
+			
 			String nicName = rs.getString("nicname");
 			System.out.println(nicName);
+			
+			String format = String.format("id:%d, name:%s, nicname:%s\n", id, name, nicName);
+			System.out.println(format);
 		}
 		
-		{	
-			rs.next();
-			String nicName = rs.getString("nicname");
-			System.out.println(nicName);
-		}
-		
-		{	
-			rs.next();
-			String nicName = rs.getString("nicname");
-			System.out.println(nicName);
-		}
 		
 		con.close(); // 반드시 닫아줘야한다. 늦게 닫으면 서버의 메모리 낭비가 많이 된다.
 		
