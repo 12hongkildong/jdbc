@@ -1,0 +1,17 @@
+package com.nelecture.web.jdbc;
+
+import java.sql.Connection;
+
+public class homeWork {
+
+	public static void main(String[] args) throws ClassNotFoundException {
+		
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		String url = "jdbc:oracle:thin:@oracle.newlecture.com:1521/xepdb1";
+		
+		Connection con = DriverManager.getConnction(url,"NEWLEC","rland");
+		
+
+	}
+
+}
