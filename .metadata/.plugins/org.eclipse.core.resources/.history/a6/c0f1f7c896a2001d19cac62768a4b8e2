@@ -19,33 +19,34 @@ public class homeWork {
 		Connection con = DriverManager.getConnection(url,"NEWLEC","rland");
 		Statement st = con.createStatement();
 
+		
+		String ment=scan.nextLine();
+		String sql = "SELECT * FROM MEMBER WHERE NAME LIKE '%"+ment+"%'";
+		
+		System.out.println(sql);
+		
+		ResultSet rs = st.executeQuery(sql);
+		
+		System.out.println("ID		이름		별명");
+		
 		while(!con.isClosed()) {
 			System.out.println("\t[ 게시글 검색 프로그램]");
 			System.out.print("제목 검색어 입력: ");
-			String ment=scan.nextLine();
-			String sql = "SELECT * FROM MEMBER WHERE NAME LIKE '%"+ment+"%'";
-			
-			//System.out.println(sql);
-			
-			ResultSet rs = st.executeQuery(sql);
-			
-			System.out.println("ID		이름		별명");
-			
-	
 			if(rs.next()) {
-				while() {
-					int id = rs.getInt("id");
-					String name = rs.getString("name");
-					String nicName = rs.getString("nicname");
-					
-					System.out.printf("%d		%s		%s\n", id, name, nicName);
-				}
+				int id = rs.getInt("id");
+				String name = rs.getString("name");
+				String nicName = rs.getString("nicname");
+				
+				System.out.printf("%d		%s		%s\n", id, name, nicName);
 			}
-			else {
-				rs.close();
-				st.close();
-				con.close();
-			}
+			else
+				break;
 		}
+		
+		rs.close();
+		st.close();
+		con.close();
 	}
+	
+
 }

@@ -33,13 +33,12 @@ public class homeWork {
 			
 	
 			if(rs.next()) {
-				while() {
-					int id = rs.getInt("id");
-					String name = rs.getString("name");
-					String nicName = rs.getString("nicname");
-					
-					System.out.printf("%d		%s		%s\n", id, name, nicName);
-				}
+				int id = rs.getInt("id");
+				String name = rs.getString("name");
+				String nicName = rs.getString("nicname");
+				
+				System.out.printf("%d		%s		%s\n", id, name, nicName);
+				
 			}
 			else {
 				rs.close();
